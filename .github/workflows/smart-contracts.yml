@@ -21,7 +21,7 @@ jobs:
 jobs: 
   test:
     name: test contracts
-     run:
+    run: |
        sudo testrpc -p 8080 &
        sudo truffle test
        runs-on: ubuntu-latest
