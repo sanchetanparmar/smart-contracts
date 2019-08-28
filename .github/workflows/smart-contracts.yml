@@ -17,11 +17,9 @@ jobs:
         sudo npm install -g truffle ethereumjs-testrpc
         sudo truffle compile
         
-         
-jobs: 
+
   test:
     name: test contracts
-    
     runs-on: ubuntu-latest
     steps: 
      - uses: actions/checkout@v1
