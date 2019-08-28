@@ -1,20 +1,20 @@
-name: CI for smart contracts
-
-on:
-  push:
-    branches:
-    - master
- 
-jobs:
-  build:
-    runs-on: ubuntu-latest
-    steps:
-    - uses: actions/checkout@v1
-    - name:  install base software 
-      run: |
-        curl -sL https://deb.nodesource.com/setup_6.x | sudo -E bash -
-        sudo apt-get install -y npm nodejs git python g++ make
-        sudo npm install -g truffle ethereumjs-testrpc
-        sudo truffle compile
-        sudo testrpc -p 8080 &
-        sudo truffle test
+# name: CI for smart contracts
+# 
+# on:
+#   push:
+#     branches:
+#     - master
+# 
+# jobs:
+#   build:
+#     runs-on: ubuntu-latest
+#     steps:
+#     - uses: actions/checkout@v1
+#     - name:  install base software
+#       run: |
+#         curl -sL https://deb.nodesource.com/setup_6.x | sudo -E bash -
+#         sudo apt-get install -y npm nodejs git python g++ make
+#         sudo npm install -g truffle ethereumjs-testrpc
+#         sudo truffle compile
+#         sudo testrpc -p 8080 &
+#         sudo truffle test
