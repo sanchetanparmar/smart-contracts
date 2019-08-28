@@ -16,4 +16,12 @@ jobs:
         sudo apt-get install -y npm nodejs git python g++ make
         sudo npm install -g truffle ethereumjs-testrpc
         sudo truffle compile
+        
          
+jobs: 
+  test:
+    name: test contracts
+     run:
+       sudo testrpc -p 8080 &
+       sudo truffle test
+       runs-on: ubuntu-latest
