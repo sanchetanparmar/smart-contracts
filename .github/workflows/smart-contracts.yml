@@ -1,0 +1,17 @@
+name: CI for smart contracts
+
+on: [push]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+    
+    steps:
+    - uses: actions/checkout@v1
+    - name: Run a one-line script
+      run: |
+        apk add --no-cache nodejs nodejs-npm git python g++ make
+        npm install -g truffle ethereumjs-testrpc
+        truffle compile
+         
