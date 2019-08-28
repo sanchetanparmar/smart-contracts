@@ -1,12 +1,13 @@
 name: CI for smart contracts
 
-on: [push]
-
+on:
+  push:
+    branches:
+    - master
+ 
 jobs:
   build:
-
     runs-on: ubuntu-latest
-    
     steps:
     - uses: actions/checkout@v1
     - name: Run a one-line script
