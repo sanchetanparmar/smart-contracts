@@ -22,9 +22,10 @@ jobs:
   test:
     name: test contracts
     
+    runs-on: ubuntu-latest
     steps: 
      - uses: actions/checkout@v1
+     - name: test rpc
        run: |
-       sudo testrpc -p 8080 &
-       sudo truffle test
-       runs-on: ubuntu-latest
+        sudo testrpc -p 8080 &
+        sudo truffle test
